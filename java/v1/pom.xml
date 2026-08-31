@@ -143,6 +143,11 @@
       <version>2.9.0</version>
     </dependency>
     <dependency>
+      <groupId>com.google.apis</groupId>
+      <artifactId>google-api-services-agenciesandbrands</artifactId>
+      <version>v1-rev20260828-2.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>com.google.auth</groupId>
       <artifactId>google-auth-library-oauth2-http</artifactId>
       <version>1.46.0</version>
@@ -168,24 +173,6 @@
       <version>3.20.0</version>
     </dependency>
   </dependencies>
-  <profiles>
-    <!--
-      This profile allows pulling the google-api-services-agenciesandbrands library from Maven
-      Central once published, for example, with `mvn compile -Premote-dependency`.
-      Prior to release, standard builds use the bundled API client sources in src/main/java without
-      requiring a remote artifact.
-    -->
-    <profile>
-      <id>remote-dependency</id>
-      <dependencies>
-        <dependency>
-          <groupId>com.google.apis</groupId>
-          <artifactId>google-api-services-agenciesandbrands</artifactId>
-          <version>[0,)</version>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
